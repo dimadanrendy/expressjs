@@ -1,0 +1,102 @@
+// Create Users
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "ehem",
+    "email": "ehem@gmail.com",
+    "password": "12345678",
+    "confPassword": "12345678",
+    "role": "admin"
+}
+
+###
+// GET ALL USERS
+GET http://localhost:5000/users
+
+###
+// GET USER BY ID
+GET http://localhost:5000/users/17663c6b-253d-494c-ad11-77d767f4aee6
+
+###
+//update user
+PATCH http://localhost:5000/users/17663c6b-253d-494c-ad11-77d767f4aee6
+Content-Type: application/json
+
+{
+    "name": "m updated",
+    "email": "rendy@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "admin" 
+}
+###
+// GET USER BY ID
+DELETE  http://localhost:5000/users/17663c6b-253d-494c-ad11-77d767f4aee6
+
+###
+// Login Admin
+POST http://localhost:5000/auth
+Content-Type: application/json
+
+{
+    "email": "ehem@gmail.com",
+    "password": "12345678"
+}
+
+###
+// Login User
+POST http://localhost:5000/auth
+Content-Type: application/json
+
+{
+    "email": "ehem@gmail.com",
+    "password": "12345678"
+}
+
+###
+// me
+GET  http://localhost:5000/auth
+Content-Type: application/json
+
+###
+// logout
+DELETE http://localhost:5000/auth
+Content-Type: application/json
+
+###
+// GET ALL PRODUCTS
+GET http://localhost:5000/products
+
+###
+// GET BY ID PRODUCTS USER
+GET http://localhost:5000/products/94c993c7-1657-4e48-af6f-793720c9ff0a
+
+###
+// GET BY ID PRODUCTS ADMIN
+GET http://localhost:5000/products/43f9899a-6b84-4106-9faa-c5938e786f11
+
+
+###
+// Create Products
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 4",
+    "price": 980
+}
+
+###
+// Update Products
+PATCH  http://localhost:5000/products/43f9899a-6b84-4106-9faa-c5938e786f11
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 980
+}
+
+###
+// Update Products
+DELETE   http://localhost:5000/products/43f9899a-6b84-4106-9faa-c5938e786f11
